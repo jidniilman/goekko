@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# (Optional) Change and Uncomment this if you want to specify the build
+#export CGO_ENABLED=0
+#export GOOS=linux
+#export GOARCH=amd64
+
+# Download all Dependencies
+go mod download
+
+# Build
+go build -o bin/goekko cmd/goekko/main.go
