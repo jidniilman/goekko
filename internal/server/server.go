@@ -2,12 +2,10 @@ package server
 
 import (
 	"fmt"
-	"jidniilman/goekko/configs"
-	"jidniilman/goekko/pkg/gql"
-
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/machinebox/graphql"
+	"jidniilman/goekko/configs"
 )
 
 type Server struct {
@@ -18,9 +16,9 @@ type Server struct {
 
 func NewGoekkoServer(cfg *configs.Config) *Server {
 	return &Server{
-		Echo:    echo.New(),
-		GraphQL: gql.Init(cfg),
-		Config:  cfg,
+		Echo: echo.New(),
+		// GraphQL: gql.Init(cfg),
+		Config: cfg,
 	}
 }
 
